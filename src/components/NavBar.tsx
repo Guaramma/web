@@ -17,12 +17,10 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
     body = (
       <>
         <NextLink href="/login">
-          <Link color="white" mr={2}>
-            Login
-          </Link>
+          <Link mr={2}>Login</Link>
         </NextLink>
         <NextLink href="/register">
-          <Link color="white">Register</Link>
+          <Link>Register</Link>
         </NextLink>
       </>
     );
@@ -30,17 +28,13 @@ export const NavBar: React.FC<NavBarProps> = ({}) => {
   } else {
     body = (
       <Flex>
-        <Box mr={2} color="white">
-          {data.me.username}
-        </Box>
-        <Button variant="link" color="white">
-          Logout
-        </Button>
+        <Box mr={2}>{data.me.username}</Box>
+        <Button variant="link">Logout</Button>
       </Flex>
     );
   }
   return (
-    <Flex bg="tomato" p={4}>
+    <Flex bg="tan" p={4}>
       <Box ml={"auto"}>{body}</Box>
     </Flex>
   );
