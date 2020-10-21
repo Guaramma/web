@@ -19,7 +19,6 @@ import {
   VoteMutationVariables,
 } from "../generated/graphql";
 import { betterUpdateQuery } from "./betterUpdateQuery";
-import { stringify } from "querystring";
 import { isServer } from "./isServer";
 
 export const errorExchange: Exchange = ({ forward }) => (ops$) => {
